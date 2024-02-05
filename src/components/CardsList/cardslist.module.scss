@@ -1,0 +1,15 @@
+.CardsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  @media (min-width: 768px) {
+    padding: 40px 0;
+    gap: 40px;
+
+  }
+
+  @media (min-width: 1200px) {
+    padding: 60px 0;
+  }
+}

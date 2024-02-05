@@ -1,0 +1,49 @@
+.Counter {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.upBtn,
+.downBtn {
+  position: relative;
+  z-index: 10;
+  width: 22px;
+  height: 13px;
+  outline: none;
+}
+
+.upBtn path,
+.downBtn path {
+  transition: fill 0.4s ease, stroke 0.4s ease;
+}
+
+.upBtn:focus-visible path {
+  stroke: var(--green);
+  fill: var(--green)
+}
+
+.downBtn:focus-visible path {
+  stroke: var(--red);
+  fill: var(--red)
+}
+
+@media (hover:hover) {
+  .upBtn:hover path {
+    fill: var(--green);
+  }
+
+  .downBtn:hover path {
+    fill: var(--red);
+  }
+}
+
+@media (min-width: 1024px) {
+  .Counter {
+    flex-direction: column;
+  }
+
+  .counterValue {
+    color: var(--black);
+  }
+}

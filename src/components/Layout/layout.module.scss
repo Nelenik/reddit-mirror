@@ -1,0 +1,8 @@
+.layout {
+  width: min(100%, 1430px);
+  margin-inline: auto;
+
+  @media (min-width: 1200px) {
+    padding: 0 15px;
+  }
+}

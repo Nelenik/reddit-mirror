@@ -1,0 +1,145 @@
+.TextContent {
+  padding: 22px 20px 16px;
+  font-size: 0.625rem;
+  font-weight: 400;
+}
+
+.metadata {
+  display: flex;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.avatar {
+  margin-right: 7px;
+  width: 20px;
+  aspect-ratio: 1/1;
+}
+
+.userLink {
+  position: relative;
+  z-index: 10;
+  margin-right: 5px;
+  color: var(--orange);
+  text-decoration-color: transparent;
+  outline: none;
+  transition: text-decoration-color 0.4s ease;
+}
+
+
+
+.createdAt {
+  color: var(--grey99);
+}
+
+.createdAt span {
+  color: inherit;
+  display: none;
+}
+
+.postLink {
+  display: -webkit-box;
+  font-weight: 400;
+  font-size: 1rem;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: color 0.4s ease;
+  outline: none;
+}
+
+.postLink::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  outline: 1px solid transparent;
+  transition: outline 0.4s ease;
+}
+
+.postLink:focus-visible,
+.postLink:active {
+  color: var(--orange);
+}
+
+.postLink:focus-visible::after,
+.postLink:active::after {
+  outline: 1px solid var(--greyD9);
+}
+
+@media (hover:hover) {
+  .userLink:hover {
+    text-decoration-color: inherit;
+  }
+
+  .postLink:hover {
+    color: var(--orange);
+  }
+
+  .postLink:hover::after {
+    outline: 1px solid var(--greyD9);
+  }
+}
+
+@media (min-width: 768px) {
+  .TextContent {
+    padding: 0;
+  }
+
+  .cardTitle {
+    width: 90%;
+  }
+
+}
+
+@media (min-width: 920px) {
+  .TextContent {
+    font-size: 0.875rem;
+  }
+
+  .metadata {
+    gap: 6px;
+  }
+
+  .avatar {
+    margin-right: 0;
+  }
+
+  .postLink {
+    font-size: 1.25rem;
+  }
+
+  .createdAt span {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 1024px) {
+  .TextContent {
+    order: 2;
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    margin-right: auto;
+  }
+
+  .metadata {
+    margin: 0;
+  }
+
+  .createdAt {
+    order: 1;
+  }
+
+  .avatar {
+    order: 2;
+  }
+
+  .userLink {
+    order: 3;
+  }
+
+  .cardTitle {
+    width: 100%;
+  }
+
+}

@@ -1,0 +1,23 @@
+.CardControls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  color: var(--greyC4);
+  font-size: 0.75rem;
+  font-weight: 500;
+
+  @media (min-width: 768px) {
+    padding: 0;
+    width: 60%;
+    justify-self: start;
+  }
+
+  @media (min-width: 1024px) {
+    order: 3;
+    width: unset;
+    gap: 24px;
+    font-size: 0.875rem;
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,16 @@
+.sortBlock {
+  width: 100%;
+  background-color: var(--white);
+  padding: 12px 20px;
+  border-radius: 7px;
+
+  @media (min-width: 768px) {
+    padding: 0;
+    margin-right: auto;
+    width: max-content;
+    // align-self: center;
+    order: 2;
+    background-color: unset;
+    border-radius: unset;
+  }
+}
