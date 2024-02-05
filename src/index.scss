@@ -20,3 +20,22 @@
   background-color: var(--greyC4);
   color: var(--black);
 }
+
+.round-btn {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background-color: var(--greyC4);
+  border-radius: 50%;
+
+  & svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+  }
+
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}

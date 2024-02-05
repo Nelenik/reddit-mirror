@@ -1,13 +1,14 @@
 import React from 'react';
 import styles from './menu.module.scss';
-import SvgMenuPoints from "assets/svg/menu-points.svg?react"
+
+import { MenuTrigger } from './MenuTrigger';
+import { MenuList } from './MenuList';
 
 export function Menu() {
   return (
     <div className={styles.menu}>
-      <button className={styles.trigger} type='button'>
-        <SvgMenuPoints />
-      </button>
+      <MenuTrigger />
+      <MenuList />
     </div>
   );
 }
