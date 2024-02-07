@@ -1,0 +1,73 @@
+.control {
+  display: inline-flex;
+  align-items: center;
+
+  &--mobComment {
+    gap: 6px;
+    translate: -8px;
+
+    &::after {
+      content: attr(data-comments-count);
+      color: var(--greyC4);
+      font-size: 0.75rem;
+    }
+
+
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &--mobGrey {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    background-color: var(--greyC4);
+    border-radius: 50%;
+
+    & svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      translate: -50% -50%;
+    }
+
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+  }
+
+  &--menu-style {
+    gap: 5px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: var(--white);
+    transition: color 0.4s ease;
+
+    svg {
+      height: 14px;
+      width: auto;
+    }
+
+    svg,
+    svg * {
+      fill: var(--grey99);
+      transition: fill 0.4s ease;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: var(--accent);
+
+      svg * {
+        fill: var(--accent);
+      }
+    }
+  }
+}
