@@ -4,7 +4,7 @@ import { NOOP } from 'utils/noop';
 
 interface IControlButtonProps {
   children: React.ReactNode,
-  isDesktop?: boolean,
+  isMenu?: boolean,
   additStyle?: string,
   buttonText?: string,
   onClick?: () => void,
@@ -13,15 +13,15 @@ interface IControlButtonProps {
 
 export function ControlButton({
   children,
-  isDesktop,
+  isMenu,
   additStyle = '',
   buttonText,
   onClick = NOOP,
   commentsCount,
 }: IControlButtonProps) {
 
-  const classNamePart = (isDesktop && styles['control--desk'])
-    || (!isDesktop && commentsCount && styles['control--mobComment'])
+  const classNamePart = (isMenu && styles['control--menu-style'])
+    || (!isMenu && commentsCount && styles['control--mobComment'])
     || styles['control--mobGrey'];
 
   return (
@@ -32,7 +32,7 @@ export function ControlButton({
       {...(commentsCount && { "data-comments-count": commentsCount })}
     >
       {children}
-      {isDesktop && <span>{buttonText}</span>}
+      {isMenu && <span>{buttonText}</span>}
     </button>
   );
 }

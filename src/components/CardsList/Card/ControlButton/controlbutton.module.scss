@@ -41,4 +41,33 @@
       display: none;
     }
   }
+
+  &--menu-style {
+    gap: 5px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: var(--white);
+    transition: color 0.4s ease;
+
+    svg {
+      height: 14px;
+      width: auto;
+    }
+
+    svg,
+    svg * {
+      fill: var(--grey99);
+      transition: fill 0.4s ease;
+    }
+
+    &:hover,
+    &:focus-visible,
+    &:active {
+      color: var(--accent);
+
+      svg * {
+        fill: var(--accent);
+      }
+    }
+  }
 }
